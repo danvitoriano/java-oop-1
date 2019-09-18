@@ -22,10 +22,16 @@ class TestaConta {
         System.out.println("rendimento mensal: " + c1.getRendimento());
         System.out.println(c1.recuperaDadosParaImpressao());
         
+        // retorna identificador estático da conta 2
+        System.out.println("id1: " + Conta.getIdentificador());
+        
         // cria nova conta 
         Conta c2 = new Conta();
         c2.setTitular("Dan");
         c2.setSaldo(1000.0);
+        
+        // retorna identificador estático da conta 2
+        System.out.println("id2: " + Conta.getIdentificador());
         
         // setters
         c1.setTitular("Hugo");

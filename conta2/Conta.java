@@ -8,6 +8,7 @@ class Conta {
     private String titular;
     private double saldo;
     private String dataDeAbertura;
+    private static int identificador;
     
     /*
     CONSTRUTORES
@@ -15,10 +16,12 @@ class Conta {
     
     public Conta(){
         // construtor sem argumentos
+        Conta.identificador++; // incrementa variável estática
     }
     
     // construtor passando titular
     public Conta(String titular){
+        this(); // chama o construtor padrão
         this.titular = titular;
     }
     
@@ -82,4 +85,8 @@ class Conta {
         this.numero = numero;
     }
     
+    public static int getIdentificador() {
+        return Conta.identificador;
+    }
+
 }
